@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videoPage</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/amfe-flexible@2.2.1/index.min.js"></script>
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2075998924432436"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+        }
+
+        .container {
+            width: 100%;
+            padding: 10px 10px;
+        }
+
+        .adv1 {
+            width: 100%;
+            min-height: 300px !important;
+            /* border: 1px solid #333; */
+        }
+
+        .ad-title {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .text {
+            color: #999;
+            padding: 0 5px;
+            font-size: 14px;
+        }
+
+        .start-btn-div-new {
+            position: relative;
+            display: flex;
+            background-color: #3175FF;
+            border-radius: 10px;
+            width: 100%;
+            height: 65px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .new-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .new-left img {
+            width: 70%;
+        }
+
+        .new-right {
+            color: #fff;
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .right-top {
+            font-size: 23px;
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-bottom {
+            font-size: 13px;
+            flex: 1;
+        }
+
+        .new-right p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: -8px;
+            width: 22px;
+            height: 22px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes breathingAnimation {
+            0% {
+                box-shadow: 0 0 0 0 #3b5998;
+            }
+
+            50% {
+                box-shadow: 0 0 0 14px rgba(29, 89, 152, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 14px rgba(59, 89, 152, 0);
+            }
+        }
+
+        /* carousel */
+
+        .carousel-container {
+            margin-top: 20px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .indicators {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .indicators span {
+            width: 30px;
+            height: 30px;
+            background: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .indicators span.active {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/wMf5F9WvEGM?si=oipYTIbmFkF1WSUD&autoplay=1&mute=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="container">
+        <!-- <div class="playButton">
+            <a href="https://www.www.ccc">button</a>
+        </div> -->
+
+        <!-- 跳转链接 -->
+        <a href="https://xxx.www.ccc/t.html" @click=handleStartPlay($event)>
+            <div class="start-btn-div-new">
+                <div class="badge">1</div>
+                <div class="new-left">
+                    <img src="https://quizs.briskgamey.com/common/videoImg/coin.png" />
+                </div>
+                <div class="new-right">
+                    <div class="right-top">
+                        <p>Play Now</p>
+                    </div>
+                    <div class="right-bottom">
+                        <p>Download and claimn $$$2 MILLION!!!</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- 轮播 -->
+        <!-- <div class="carousel-container" id="carousel-container">
+            <div class="carousel">
+                <img onclick="handleJump(1)" src="https://quizs.briskgamey.com/common/videoImg/banner1.jpg" />
+                <img onclick="handleJump(2)" src="https://quizs.briskgamey.com/common/videoImg/banner2.jpg" />
+                <img onclick="handleJump(3)" src="https://quizs.briskgamey.com/common/videoImg/banner3.jpg" />
+                <img onclick="handleJump(4)" src="https://quizs.briskgamey.com/common/videoImg/banner4.jpg" />
+            </div>
+        </div> -->
+        <!-- 轮播 -->
+
+        <!-- <div class="indicators">
+            <span v-for="(it, index) in new Array(imageCount)" :key="index"
+                :class="{ active: index === currentIndex }"></span>
+        </div> -->
+        <div class="ad-title ad2-title">
+            <div class="line"></div>
+            <div class="text">ADVERTISEMENT</div>
+            <div class="line"></div>
+        </div>
+        <div class="adv1" id="adv1">
+            <!-- whistleh.com_06123_300X250_1 -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2075998924432436"
+                data-ad-slot="1889879048" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <script>
+        var imageCount = 4
+        var currentIndex = 0
+        var interval = 3000; // 轮播间隔时间，毫秒
+        var $carousel = null
+        var autoSlideInterval = null
+
+        window.onload = function () {
+
+            $carousel = $('.carousel')
+            if ($carousel && $carousel.length) {
+                // 初始化样式
+                $carousel.css('width', `${100 * imageCount}%`)
+                $carousel.find('img').css('width', `${100 / imageCount}%`)
+                // 初始化，显示第一张图片
+                showImage(currentIndex)
+
+                // 设置自动轮播
+                autoSlideInterval = setInterval(showNextImage, interval)
+
+                // 添加手势滑动支持
+                const hammer = new Hammer($('#carousel-container')[0])
+                hammer.on('swipeleft', () => {
+                    showNextImage()
+                    resetAutoSlide()
+                });
+                hammer.on('swiperight', () => {
+                    showPreviousImage()
+                    resetAutoSlide()
+                });
+            }
+
+            $.ajax({
+                url: 'https://app.concrdeng.com/h5webad/app/api/track/page', // 替换为你的请求 URL
+                type: 'POST',
+                data: JSON.stringify({
+                    ...getTrackPageParams(),
+                    event: 'home',
+                    ...getTrkOpt(),
+                }),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    console.log('Success:', response);
+                },
+                error: function (xhr, status, error) {
+                    console.log('Error:', error);
+                }
+            });
+        }
+
+        function getTrackPageParams() {
+            if (!localStorage.getItem('h5Uid')) {
+                localStorage.setItem('h5Uid', generateUUID())
+            }
+
+            if (!sessionStorage.getItem('sessionId')) {
+                sessionStorage.setItem('sessionId', generateUUID())
+            }
+            return {
+                source: 'mbuy',
+                h5Uid: localStorage.getItem('h5Uid'),
+                sessionId: sessionStorage.getItem('sessionId'),
+                mkCampaignCode: localStorage.getItem('mkCampaignCode') || '',
+                language: navigator.language || navigator.userLanguage,
+                brand: '', // 暂时传空字符串
+                model: '', // 暂时传空字符串
+                domain: window.location.hostname,
+                url: window.location.href,
+                referrer: sessionStorage.getItem('referrer') || '',
+                pageName: window.location.href.split('.html')[0].split('/')[window.location.href.split('.html')[0].split('/').length - 1],
+                devicePixelRatio: window.devicePixelRatio, // 设备像素比
+                deviceMemory: navigator.deviceMemory, // 设备内存
+                hardwareConcurrency: navigator.hardwareConcurrency, // 硬件并发数
+                languages: navigator.languages.join(','), // 语言集
+                vendor: navigator.vendor, // 浏览器供应商
+                height: window.innerHeight,
+                width: window.innerWidth,
+                limitAdType: ''
+            }
+        }
+
+        function generateUUID() {
+            let uuid = '', i, random;
+            for (i = 0; i < 32; i++) {
+                random = Math.random() * 16 | 0;
+                uuid += (i == 12 ? 4 : (i == 16 ? (random & 3 | 8) : random)).toString(16);
+            }
+            return uuid;
+        }
+
+        function getTrkOpt() {
+            return {
+                "mkLinkId": 27,
+                "mkLinkCode": "quizs7_tt_br_qz",
+                "adAccountId": 2,
+                "appId": 1,
+                "appCode": "h5dati",
+                "adAccountCode": "jukan-qz",
+                "adInfo": [
+                    {
+                        "adType": "NATIVE",
+                        "adId": 167,
+                        "adCode": "whistleh.com_06123_300X250_1"
+                    },
+                    {
+                        "adType": "NATIVE",
+                        "adId": 168,
+                        "adCode": "whistleh.com_06123_300X250_2"
+                    },
+                    {
+                        "adType": "NATIVE",
+                        "adId": 169,
+                        "adCode": "whistleh.com_06123_300X250_3"
+                    },
+                    {
+                        "adType": "NATIVE",
+                        "adId": 170,
+                        "adCode": "whistleh.com_06123_300X250_4"
+                    },
+                    {
+                        "adType": "INTERSTITIAL",
+                        "adId": 171,
+                        "adCode": "whistleh.com_06123_inter"
+                    },
+                    {
+                        "adType": "BOTTOM_ANCHOR",
+                        "adId": 172,
+                        "adCode": "whistleh.com_06123_anchor"
+                    }
+                ],
+                "category": "qa",
+                "adMedia": "qiezi"
+            }
+        }
+
+        function showImage(index) {
+            $carousel.css('transform', `translateX(-${index * 25}%)`)
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % imageCount
+            showImage(currentIndex)
+        }
+
+        function showPreviousImage() {
+            currentIndex = (currentIndex - 1 + imageCount) % imageCount
+            showImage(currentIndex)
+        }
+
+        function resetAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval)
+            }
+            autoSlideInterval = setInterval(showNextImage, interval)
+        }
+    </script>
+</body>
+
+</html>

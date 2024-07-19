@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quiz-test</title>
+</head>
+
+<body>
+  <form action="http://localhost:3000/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="number">Phone:</label>
+    <input type="number" id="number" name="number" required>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <!-- <iframe style="width:100%;height:200px;" src="https://www.thepaper.cn/newsDetail_forward_27534610"></iframe> -->
+  <button onclick="test1()">get-test</button>
+  <button onclick="test2()">post-test</button>
+  <button onclick="test3()">test</button>
+  <script>
+    var postRequest = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
+    window.onload = function () {
+      // getRequestMethod()
+      // postRequestMethod()
+
+    }
+
+    function postRequestMethod() {
+      // var postRequest = new XMLHttpRequest();
+      postRequest.open('POST', 'https://app.concrdeng.com/h5webad/app/api/user/event', true);
+      postRequest.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+      postRequest.onreadystatechange = function () {
+        if (postRequest.readyState === 4 && postRequest.status === 201) {
+          console.log('POST Response:', postRequest.responseText);
+        }
+      };
+
+      var data = JSON.stringify({
+        "source": 'mbuy',
+        "event": "posttest",
+        "actionOne": 'posttest',
+        "actionTwo": 'posttest',
+        "actionMsg": 'posttest',
+        "h5Uid": '123123123',
+        "appUid": "443185c687594d87598d485b4ba140ad",
+        "sessionId": '443185c687594d87598d485b4ba140ad',
+        "mkCampaignCode": '', // option
+        "ip": "187.4.27.223",
+        "ua": "Mozilla/5.0 (Linux; Android 9; ASUS_X00TDB Build/PKQ1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/119.0.6045.66 Mobile Safari/537.36",
+        "os": "android",
+        "osVersion": "10",
+        "uaMedia": "1711ec8b-10d6-4947-b2c7-29925b616b1c",
+        "country": "BR",
+        "city": "beijing",
+        "language": "en-US",
+        "brand": "vivo",
+        "model": "vivo 1920",
+        "domain": "www.x100games.com",
+        "url": "https://www.x100games.com/home.html?pa=tt_01",
+        "referrer": "https://www.baicu.com",
+        "pageName": "home",
+        "belongAppCode": "2048app"
+      });
+
+      postRequest.send(data);
+    }
+
+    function getRequestMethod() {
+      // var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://api.ipify.org/?format=json', true);
+
+      // 设置响应处理函数
+      xhr.onload = function () {
+        console.log('loaded')
+        if (xhr.status >= 200 && xhr.status < 300) {
+          // 请求成功，处理响应
+          console.log('Response:', xhr.responseText);
+        } else {
+          // 请求失败，处理错误
+          console.error('Request failed with status:', xhr.status);
+        }
+      };
+
+      // 设置错误处理函数
+      xhr.onerror = function () {
+        console.error('Request failed due to a network error');
+      };
+
+      xhr.send();
+    }
+
+    function test1() {
+      getRequestMethod()
+    }
+    function test2() {
+      postRequestMethod()
+    }
+    function test3() {
+      window.mobileAj.showToast('1111')
+    }
+  </script>
+
+</body>
+
+</html>

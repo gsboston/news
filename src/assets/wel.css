@@ -1,0 +1,194 @@
+.header {
+  width: 100%;
+  height: 108px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #ede6e6;
+}
+.header .header-logo {
+  width: 350px;
+  display: block;
+}
+.header .header-menu {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  left: 18px;
+}
+.header .header-menu-close {
+  width: 45px !important;
+  height: 45px !important;
+  display: none;
+}
+.header .header-menu-items {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  top: 98px;
+  z-index: 100;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+.header .header-menu-items ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.header .header-menu-items ul li {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1efef;
+  background: #fff;
+}
+.header .header-menu-items ul li a p {
+  color: #47acff;
+  font-size: 33px;
+  font-weight: 600;
+  padding-left: 25px;
+}
+.welcome {
+  min-height: calc(100% - 308px);
+  padding: 10px;
+}
+.welcome .ad-title {
+  display: flex;
+  align-items: center;
+}
+.welcome .ad-title .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+.welcome .ad-title .text {
+  color: #999;
+  padding: 0 5px;
+  font-size: 26px;
+}
+.welcome .start-btn-div {
+  position: relative;
+}
+.welcome .start-btn-div p {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 15px;
+}
+.welcome .start-btn-div > div {
+  position: relative;
+}
+.welcome .start-btn-div > div .btn-bg {
+  width: 95%;
+  height: 105px;
+  background: #3175FF;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 2.5%;
+  font-size: 45px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.welcome .start-btn-div > div .btn-bg a {
+  z-index: 11;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.welcome .start-btn-div > div .btn-bg .badge {
+  position: absolute;
+  top: -25px;
+  right: -19px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 31px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome .start-btn-div > div .btn-bg-ani {
+  position: absolute;
+  width: 95%;
+  height: 105px;
+  left: 2.5%;
+  z-index: 9;
+  border-radius: 8px;
+  animation: breathingAnimation 1.4s infinite;
+  background: green;
+  top: 0;
+}
+.welcome .ad1,
+.welcome .ad2 {
+  min-height: 400px;
+  position: relative;
+}
+.welcome .ad1 .ad-pop,
+.welcome .ad2 .ad-pop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8888;
+  display: block;
+}
+@keyframes breathingAnimation {
+  0% {
+    box-shadow: 0 0 0 0 #3b5998;
+  }
+  50% {
+    box-shadow: 0 0 0 25px rgba(29, 89, 152, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 25px rgba(59, 89, 152, 0);
+  }
+}
+.bottom {
+  background: #00315d;
+  padding-top: 45px;
+  height: 200px;
+}
+.bottom .bottom-btn {
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bottom .bottom-btn a {
+  color: #d7dfe6;
+  font-size: 21px;
+  font-weight: 600;
+  border-right: 1px solid #fff;
+  padding: 0 42px;
+}
+.bottom .bottom-btn a:last-child {
+  border-right: none;
+}
+.bottom .bottom-info {
+  height: 35px;
+  font-size: 20px;
+  color: #8d99a2;
+  font-weight: 600;
+  margin-top: 75px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

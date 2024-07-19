@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ad1, .ad2, .ad3, .ad4{
+    width: 100%;
+    text-align: center;  
+    min-height: 250px;
+}
+
+html,
+body,
+#appWelcome,
+#appResult,
+#app,
+#appDetail {
+    height: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
