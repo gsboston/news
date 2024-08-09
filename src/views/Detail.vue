@@ -3,7 +3,7 @@
   <div class="index">
     <div class="title-img">
       <p>{{curObj.title}}</p>
-      <img v-if="curIndex!=18 && curIndex!=19 && curIndex!=20" :src="'http://p-pixel.com/image/' + (curIndex - 0 + 1) + '.jpg'" />
+      <img v-if="curIndex!=18 && curIndex!=19 && curIndex!=20" :src="'http://p1-pixel.com/image/' + (curIndex - 0 + 1) + '.jpg'" />
     </div>
     <div class="content">
       <div class="content-item" v-for="(item, index) in curObj.list" :key="index">
@@ -23,7 +23,7 @@
         <div v-if="item" class="list-item">
           <a @click="handleJumpPage" :href="'detail.html?index=' + item.index">
             <div class="div-img">
-              <img :src="'http://p-pixel.com/image/' + (item.index + 1) + '.jpg'" />
+              <img :src="'http://p1-pixel.com/image/' + (item.index + 1) + '.jpg'" />
             </div>
             <div>
               <p class="two-lines-ellipsis">{{ item.title }}</p>

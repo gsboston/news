@@ -11,7 +11,7 @@
         <a v-if="item.type!='AboutUs' && item.type!='PrivacyPolicy' && item.type!='TermsofUse'"
          :href="'detail.html?index=' + item.index">
           <div class="div-img">
-            <img :src="'http://p-pixel.com/image/' + (item.index + 1) + '.jpg'" />
+            <img :src="'http://p1-pixel.com/image/' + (item.index + 1) + '.jpg'" />
           </div>
           <div>
             <p class="two-lines-ellipsis">{{ item.title }}</p>
