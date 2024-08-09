@@ -191,6 +191,41 @@ export const news = [
         ],
         type: 'Diet'
     },   
+    {
+        index: 15,
+        title: 'Privacy Policy',
+        list: [
+            { title: '1. Information Collection', content: 'We might gather individual data from you when you intentionally give it to us, for example, when you register a record, buy into our bulletin, or finish up a contact structure. The data we gather might incorporate your name, email address, telephone number, and some other data you decide to give.We likewise consequently gather specific non-individual data when you visit our site, for example, your IP address, program type, working framework, and the pages you visit. This data is gathered through treats and comparative advances and assists us with working on our site and improve your client experience.' },
+            { title: '2. Data Utilization', content: 'We utilize the gathered data for different purposes, including:To customize your experience on our site and give you pertinent substance.To work on our site and upgrade its usefulness.To speak with you, answer your requests, and give client care.To send you limited time materials, bulletins, and updates about our items and administrations.To break down site utilization and patterns, and to accumulate segment data.' },
+            { title: '3. Data Sharing', content: 'We don`t offer, exchange, or lease your own data to outsiders without your assent. Be that as it may, we might impart your data to believed specialist organizations who help us in working our site and leading our business. These specialist co-ops are committed to keep your data secret and use it just for the reasons determined by us.We may likewise uncover your data whenever legally necessary or to safeguard our privileges, property, or security, or the freedoms, property, or wellbeing of others.chnologies and assists us with working on our site and improve your client experience.' },
+            { title: '4. Information Security', content: 'We view the security of your own data in a serious way and carry out different measures to safeguard it from unapproved access, divulgence, change, or obliteration. These actions incorporate encryption, firewalls, and normal security reviews. In any case, if it`s not too much trouble, note that no strategy for transmission over the web or electronic stockpiling is 100 percent secure, and we can`t ensure outright security.' },
+            { title: '5. Client Privileges', content: 'You reserve the privilege to access, update, and erase your own data. Assuming you might want to practice any of these privileges or have any different kinds of feedback about our Security Strategy, if it`s not too much trouble, reach us utilizing the data gave underneath.Much thanks to you for picking us. We esteem your protection and value your confidence in us.' },
+            ],
+        type: 'PrivacyPolicy'
+    },  
+    {
+    index: 16,
+        title: 'Teams of Use',
+        list: [
+            { title: '', content: 'By getting to and utilizing our site, you consent to conform to the accompanying agreements:' },
+            { title: '1. Account Liability', content: 'You are liable for keeping up with the secrecy of your record and secret key. You consent to advise us promptly of any unapproved utilization of your record.' },
+            { title: '2. Legitimate Site Use', content: 'You should not participate in any action that might disturb or disrupt the legitimate working of our site, including however not restricted to hacking, spamming, or sending malware.' },
+            { title: '3. Legitimate and Approved Use', content: 'You should not involve our site for any unlawful or unapproved reason. You consent to agree with every single pertinent regulation and guidelines.' },
+            { title: '4. Content Transfer', content: 'You should not transfer or communicate any happy that is unlawful, unsafe, slanderous, or encroaches upon the freedoms of others. You are exclusively liable for the substance you post on our site.' },
+            { title: '5. Suspension or End', content: 'We claim all authority to suspend or end your admittance to our site whenever, without earlier notification, in the event that you disregard these agreements.' },
+            ],
+        type: 'TeamsofUse'
+    },   
+    {
+    index: 17,
+        title: 'About US',
+        list: [
+            { title: '', content: 'Welcome to our information door, where revelation meets substance. We exceptionally regard being a vivacious stage where clients uncover enthralling and huge substance.' },
+            { title: '', content: 'Whether you`re diving into the latest examples, researching significant dives into specialty subjects, or searching for rational pieces of information, our site is your go-to objective. we curate an alternate extent of focuses, ensuring there`s something for each curious mind. Our gathering is dedicated to conveying attracting and illuminating articles that streak academic interest and further develop your electronic understanding. ' },
+            { title: '', content: 'Join our neighborhood data searchers and stay revived with persuading stories and all around examinations. Find the pleasure of learning and exploring with us as we continue to progress and develop our substance commitments. Welcome to a vast expanse of disclosure and brightening. Assuming you have any inquiries, if it`s not too much trouble, reach us, our email address is ppmlm3561@gmail.com' },
+            ],
+        type: 'AboutUS'
+    },  
 ]
 
 // Home 首页	0，1，2，3，4，5，6，7，8，9，10，11，12，13，14

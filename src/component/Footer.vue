@@ -1,9 +1,9 @@
 <template>
   <div class="bottom">
     <div class="bottom-btn">
-      <a @click="handleJumpPage" href="detail.html?index=18">About Us</a>
-      <a @click="handleJumpPage" href="detail.html?index=19">Privacy Policy</a>
-      <a @click="handleJumpPage" href="detail.html?index=20">Teams of Use</a>
+      <a @click="handleJumpPage" href="detail.html?index=17">About Us</a>
+      <a @click="handleJumpPage" href="detail.html?index=15">Privacy Policy</a>
+      <a @click="handleJumpPage" href="detail.html?index=16">Teams of Use</a>
     </div>
     <div class="bottom-info">2019-2024 pixel.com  All Rights Reserved</div>
   </div>

@@ -3,7 +3,7 @@
   <div class="index">
     <div class="title-img">
       <p>{{curObj.title}}</p>
-      <img v-if="curIndex!=18 && curIndex!=19 && curIndex!=20" :src="'http://p1-pixel.com/image/' + (curIndex - 0 + 1) + '.jpg'" />
+      <img v-if="curIndex!=16 && curIndex!=15 && curIndex!=17" :src="'http://p1-pixel.com/image/' + (curIndex - 0 + 1) + '.jpg'" />
     </div>
     <div class="content">
       <div class="content-item" v-for="(item, index) in curObj.list" :key="index">
@@ -11,7 +11,7 @@
         <p class="item-content" v-if="item.content">{{item.content}}</p>
       </div>
     </div>
-    <div v-if="curIndex!=18 && curIndex!=19 && curIndex!=20">
+    <div v-if="curIndex!=15 && curIndex!=16 && curIndex!=17">
       <div class="dashed-line-container">
         <div class="dashed-line"></div>
         <div class="text">Recommend</div>
