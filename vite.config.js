@@ -21,8 +21,6 @@ export default defineConfig({
         // dmca: './dmca.html',
         // cookiepolicy: './cookiepolicy.html',
         // contact: './contact.html',
-        // test: './test.html',
-        // test2: './test2.html'
       }
     }
   },

@@ -4,7 +4,7 @@
       <img class="header-logo" src="../assets/img/home-btn.png" />
     </a>
     <a class="header-title" :href="'index.html'">
-      NEWS
+      <img class="header-mid-logo" src="../assets/img/logo.jpg" />
     </a>
     <img
       v-if="!menuActive"
@@ -57,6 +57,10 @@ function handleOpenMenu() {
   .header-logo {
     width: 150px;
     display: block;
+  }
+  .header-mid-logo {
+    width: 50px;
+    margin-top: 10px;
   }
   .header-title{
     color: #111;

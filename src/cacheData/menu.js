@@ -1,5 +1,5 @@
 export const menus = [
-  { sName: 'Science' },
-  { sName: 'Life' },
-  { sName: 'Entertainment' },
+  { sName: 'Diet' },
+  { sName: 'Sports' },
+  { sName: 'Habit' },
 ]

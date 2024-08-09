@@ -5,7 +5,7 @@
       <a @click="handleJumpPage" href="detail.html?index=19">Privacy Policy</a>
       <a @click="handleJumpPage" href="detail.html?index=20">Teams of Use</a>
     </div>
-    <!-- <div class="bottom-info">2019-2023 daringbeam.com All Rights Reserved</div> -->
+    <div class="bottom-info">2019-2024 pixel.com  All Rights Reserved</div>
   </div>
 </template>
 <script setup>
@@ -38,14 +38,14 @@ function handleJumpPage(){
     }
   }
   .bottom-info {
-    height: 35px;
+    height: 25px;
     font-size: 10px;
-    color: #8d99a2;
+    color: #fff;
     font-weight: 600;
-    margin-top: 15px;
     justify-content: center;
     display: flex;
-    align-items: center;
+    align-items: center; 
+    background: #00315d;
   }
 }
 </style>
